@@ -13,7 +13,10 @@
     line-height: 1.6;
     color: #333;
   }
-  
+    a {
+    text-decoration: none;
+    color: inherit;
+  }
   nav ul {
     display: flex;
     justify-content: center;
@@ -32,10 +35,7 @@
     text-decoration: none;
   }
 
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
+ 
   
   ul {
     list-style-type: none;
