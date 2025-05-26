@@ -98,23 +98,7 @@ nav a:hover {
     font-size: 4.5rem;
     line-height: 575px;
 }
-/*
-.cta-button {
-    background-color: white;
-    padding: 15px 30px;
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: black;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
 
-.cta-button:hover {
-    background-color: black;
-    color: white;
-}
-*/
-/* About Section */
 .about {
     height: 75px;
     background-color: #0e0f17;
@@ -127,12 +111,108 @@ nav a:hover {
     margin: 0 auto;
     line-height: 80px;
 }
+.hero-content3{
+  border-radius: 20px;
+  line-height: 80px;
+  background-color: #0e0f17;
+  margin: auto;
+  max-width: 367px;
+  height:300px;
+}
+.hero-content3 p{
+  font-size: 2rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+  padding-bottom:50px;
+}
+.circle1 {
+  border-radius:50%;
+  border:5px solid rgb(0, 207, 10);
+  margin: auto;
+  width: 250px;
+  height: 250px;
+  background: transparent;
+  line-height:60px;
+}
 
+.circle1 p{
+  font-size: 2rem;
+  padding:10px;
+  color:rgb(0, 207, 10);
+  text-decoration: none;
+  
+}
+.circle1 h1{
+  padding-top:10px;
+  padding-bottom:0px;
+  font-size: 4rem;
+  color: rgb(0, 207, 10);
+  text-decoration:none;
+}
+.aboutt {
+  height: 900px;
+  background-color: #0e0f17;
+  text-align: center;
+}
 
+.aboutt p{
+  font-size: 1.1rem;
+  max-width: 800px;
+  color: white;
+  margin: 0 auto;
+  line-height: 50px;
+  padding-bottom:10px;
+}
+
+.aboutTitle p{
+  font-size: 3rem;
+  max-width: 600px;
+  color: white;
+  margin: 0 auto;
+  line-height: 150px;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 10px;
+}
+
+.rules p{
+  font-size: 1.1rem;
+  max-width: 700px;
+  color: white;
+  margin: 0 auto;
+  line-height: 30px;
+}
+
+.button-group {
+  margin-top: 30px; /* spacing from text above */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-link {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #0e0f17;;
+  color: #ffffff;
+  padding: 10px 20px;
+  margin-bottom: 15px; /* spacing between buttons */
+  border: 3px solid #fff;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.button-link:hover {
+  background-color: #24273b;
+}
 
 /* Services Section */
 .services {
-    height: 500px;
+    height: 1400px;
     text-align: center;
     /*
     background:url("slide1.jpg");
@@ -164,22 +244,6 @@ nav a:hover {
 .service-item p {
     font-size: 1.1rem;
     color:white;
-}
-
-.cta-button {
-    
-    line-height:175px;
-    padding: 15px 60px;
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: white;
-    border: 2px solid white;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: black;
-    color: white;
 }
 
 
