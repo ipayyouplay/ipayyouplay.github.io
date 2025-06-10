@@ -171,7 +171,6 @@ nav a:hover {
   color: white;
   margin: 0 auto;
   line-height: 150px;
-  text-decoration: underline;
   text-decoration-thickness: 3px;
   text-underline-offset: 10px;
 }
