@@ -133,19 +133,17 @@ nav a:hover {
   width: 250px;
   height: 250px;
   background: transparent;
-  line-height:60px;
+  line-height:40px;
 }
 
 .circle1 p{
   font-size: 2rem;
-  padding:10px;
   color:rgb(0, 207, 10);
   text-decoration: none;
+  padding-top:35px;
   
 }
 .circle1 h1{
-  padding-top:10px;
-  padding-bottom:0px;
   font-size: 4rem;
   color: rgb(0, 207, 10);
   text-decoration:none;
