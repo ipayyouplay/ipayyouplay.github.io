@@ -5,10 +5,12 @@
 }
 
 body {
-    font-family:'Courier New', Courier, monospace;
-    font-weight: lighter;
+    /*font-family:'Courier New', Courier, monospace;*/
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
     line-height: 1.6;
     color: #333;
+    overflow-x:hidden;
 }
 
 a {
@@ -22,21 +24,24 @@ ul {
 
 /* Header and Navigation */
 header {
-    padding:18px;
-    background-color:#111
+    padding:1%;
+    background-color:#000000;
+    width: 100%;
 }
 
 nav ul {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 3%;
+    padding: 0; 
+    margin: 0;  
 }
 
 nav a {
     color: white;
-    font-size: 18px;
-    padding: 10px 20px;
+    font-size: 1rem;
     transition: background-color 0.3s;
+    font-weight: 300;
 }
 
 nav a:hover {
@@ -51,53 +56,179 @@ nav a:hover {
     background-size: cover;
     color: white;
     text-align: center;
-    height: 800px;
+    height: 100vh;
     /*animation: imgchange 3s infinite alternate;
     object-fit:cover;
     */
 }
 
-@keyframes imgchange{
-    0%
-    {
-        background: url('steam.jpg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;
-        background-size: cover;
-        color: white;
-        text-align: center;
-        height: 800px;
-    
-        object-fit:cover;
-    }
-
-    100%
-    {
-        background:url('ps4.jpg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;
-        background-size: cover;
-        color: white;
-        text-align: center;
-        height: 800px;
-       
-        object-fit:cover;
-    }
-}
 
 .hero-content1 {
-    font-size: 2.5rem;
-    margin-bottom: 100px;
-    line-height: 250px;
-    
+    font-size: 5rem;
+    margin-bottom: 10%;
+    line-height: 25vh;
+    opacity: 0;                    /* start invisible */
+    transform: translateX(-40%);   /* start off to the left */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.hero-content1.here {
+    opacity:1;
+    transform: translateX(0);
 }
 
 .hero-content2{
     font-size: 4.5rem;
-    line-height: 575px;
+    line-height: 75vh;
+    opacity:0;
+    transform: translateX(40%);
+    transition: opacity 0.6s ease, transform 0.6s  ease;
 }
+
+.hero-content2.here {
+    opacity:1;
+    transform: translateX(0);
+}
+
+.sponsors {
+    height: 100%;
+    background-color: #0e0f17;
+}
+.sponsors h1{
+    font-size:2.5rem;
+    color:white;
+    text-align:center;
+}
+.sponsors p{
+    font-size:1.5rem;
+    color:rgb(54, 54, 54);
+    text-align:center;
+}
+.sponsors p:last-child{
+    padding-bottom:10%;
+    padding-top:5%
+}
+/*
+.images {
+    background-color: #0e0f17;
+    padding-top: 5%;
+    padding-bottom:5%;
+}
+.images img:first-child {
+    margin-left: 20%;
+}
+.images img:last-child {
+    margin-left: 10%;
+}
+*/
+
+.images {
+  background-color: #0e0f17;
+  padding: 5% 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%; /* space between images, scales with screen */
+}
+
+.images img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Scale images based on screen width */
+.images img:first-child {
+  width: 30%;  /* 30% of container width */
+}
+
+.images img:last-child {
+  width: 15%;  /* smaller image takes 15% of container width */
+}
+
+/* Scroll animation styles */
+.scroll-img {
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-img.left {
+  transform: translateX(-40%);
+}
+
+.scroll-img.right {
+  transform: translateX(40%);
+}
+
+.scroll-img.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+.dropdown {
+  max-width: 600px;
+  margin: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dropdown-btn {
+  width: 100%;
+  text-align: left;
+  background-color: #111;
+  color: white;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dropdown-btn:hover {
+  background-color: #333;
+}
+
+.dropdown-btn::after {
+  content: " ▼";        
+  font-size: 1em;    
+  margin-left: 33%; 
+  transition: transform 0.3s;
+}
+
+.dropdown-btn.open::after {
+  transform: rotate(180deg);
+}
+
+.dropdown-content {
+  max-height: 0;                  
+  overflow: hidden;
+  padding: 0 1rem;                
+  background-color: #0e0f17;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: max-height 0.3s ease;
+  color:white;
+}
+
+
+.discord{
+    height:30%;
+    background: url('DiscordGiveawaysPS.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    color: white;
+    text-align: center;
+    opacity: 0;            
+    transition: opacity 1.5s ease; 
+    margin-bottom:10%;
+}
+.discord.visible {
+  opacity: 1;       
+}
+
 
 .about {
     height: 75px;
@@ -105,12 +236,15 @@ nav a:hover {
     text-align: center;
 }
 .about p{
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     max-width: 800px;
     color: white;
     margin: 0 auto;
     line-height: 80px;
 }
+
+
+
 .hero-content3{
   border-radius: 20px;
   line-height: 80px;
