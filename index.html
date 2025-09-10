@@ -59,62 +59,67 @@
   
         <p>____________________________________________________________________________________</p>
         <p>_____________________________________________________________________________________________________________</p>
-       
+        <h1>Plus Bonus</h1>
     </div>
-    <!-- Services Section -->
+    
     <div class="services">
-      
-
-        <!--
-        <div class="service-item">
-            <h3>Free Video Games For Those Who Need It</h3>
-            <p>Hey friends,  can't buy a video game on Steam? I've been there too.
-            </p>
-            <p>That's why I made this charity site. So you can buy the games you always wanted.</p>
-            <p>This site pays for the games using money people donate, so if you're interested, please reciprocate.</p>
-        </div>
-        
-        <div class="hero-content3">
-
-
-           <div class="circle1">
-                <p>Available Funds</p>
-                <h1>$300</h1>
-                <p>8/27/25</p>
-                
-           </div>
-        </div>
-    -->
         <div class = "discord">
-
+           <!-- <img class="scroll discord" src="DiscordGiveawaysPS.png" alt="Discord Logo"> -->
         </div>
-        <div class="dropdown">
-            <button class="dropdown-btn">Free Video Games For Those Who Need It</button>
-            <div class="dropdown-content">
-                <p>
-                    Hey friends, can't buy a video game on Steam? I've been there too. That's why
+
+        <button class="accordion">Free Video Games For Those Who Need It</button>
+        <div class="panel">
+            <p>Hey friends, can't buy a video game on Steam? I've been there too. That's why
                     I made this charity site. So you can buy the games you've always wanted.
                     This site pays for the games using money people donate, so if you're interested, please reciprocate.
-                </p>
-            </div>
+            </p>
         </div>
-    </section>
-    
 
-        
+        <button class="accordion">How Does It Work?</button>
+        <div class="panel">
+            <p>If you're here, you're probably itching to buy that steam game you never could get. It sounds too good to be true! Here's the deal:</p>
+                <p>1. There is a collective fund everyone draws from when they purchase games (above)</p>
+                <p>2. Click the request button to fill out a form with the game you'd like to be donated, and fill out a waiver with your parents</p>
+                <p>3. If the pool has enough money, I will respond to your request. Otherwise you will wait in this <a href = "https://docs.google.com/spreadsheets/d/1BZIzCMBTkiVAcwJUNIoqHQnzSEPeE_iR9kPldP65hsw/edit?usp=sharing" target="_blank">queue (link)</a>.</p>
+                <p>4. 2 Weeks after you first downloaded your game, you will receive a request to fill out a 1-minute form detailing the impact of the game on your life</p>
+        </div>
+
     </div>
+    
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
 
-    <!-- Contact Section -->
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("open");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            panel.classList.remove("open");
+            } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+            panel.classList.add("open");
+            }
+        });
+        }
+    </script>
+
+ 
+       
+    
+   
     <div class="contact">
         <h2>Contact Me</h2>
         <p>Get in touch with me for more information or to get started with our services.</p>
         <p>Email: ceo.ipayyouplay@gmail.com</p>
     </div>
 
-    <!-- Footer -->
+
     <footer>
-        <p>&copy; ipayyouplay.github.io. All Rights Reserved. Last Updated 7/10/25</p>
+        <p>&copy; ipayyouplay.github.io. All Rights Reserved. Last Updated 9/10/25</p>
     </footer>
+    
      <script>
         const text = document.querySelectorAll('.hero-content1, .hero-content2');
 
@@ -129,26 +134,7 @@
         }, { threshold: 0.2 });
 
         text.forEach(el => wth.observe(el));
-    </script>
-
-    <script>
-        const dropdowns = document.querySelectorAll('.dropdown-btn');
-
-        dropdowns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const content = btn.nextElementSibling;
-
-            if (content.style.maxHeight && content.style.maxHeight !== "0px") {
-            // Close
-            content.style.maxHeight = "0";
-            } else {
-            // Open
-            content.style.maxHeight = content.scrollHeight + "px"; 
-            }
-        });
-        });
-    </script>
-    <script>
+    
         const images = document.querySelectorAll('.scroll-img');
 
         const observer = new IntersectionObserver((entries) => {
@@ -162,8 +148,7 @@
         }, { threshold: 0.2 });
 
         images.forEach(img => observer.observe(img));
-    </script>
-    <script>
+
         const hero = document.querySelector('.discord');
 
         const observers = new IntersectionObserver((entries) => {
