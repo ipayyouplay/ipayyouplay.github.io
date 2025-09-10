@@ -236,7 +236,7 @@ nav a:hover {
     margin-bottom: 1rem;
 }
 
-.dropdown-content a,.dropdown-content2 a {
+.panel a {
     color: #43bff9;
     text-decoration: underline;
 }
