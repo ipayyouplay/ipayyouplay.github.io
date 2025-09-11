@@ -1,51 +1,95 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Game Charity</title>
     <link rel="stylesheet" href="donorstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <header>
+     <header>
         <div class = "nav-bar">
+            <a href="index.html" class="logo">I PAY YOU PLAY</a>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="request.html">Request</a></li>
                     <li><a href="donors.html">Donors</a></li>
-                    <li><a href="AboutMe.html">About Me And More</a></li>
+                    <li><a href="AboutMe.html">About Me</a></li>
                 </ul>
-
-                
             </nav>
-        </div>
-    </header>
-    <div class = "container">
-
-   
-        <div class = "main">
-            <p><strong>Thank You For Your Support</strong></p>
-            
-            <div class = "donorFrame">
-                <p>Seed Money (me) - 25$; March 2025</p>
-                <p>Pokka - $50; May 2025</p>
-                <p>Dr. Chen - 25$; July 2025</p>
-        
-            
-            </div>
-            <section id="donate">
-                <a href="https://gofund.me/eb532531" target="_blank" class="cta-button">Donate</a>
-               
-            </section>
-        
-        </div>
-
-        
     </div>
+    </header>
+
+    <section class="donors">
+        <h1 class="donors-title">Thank You for Donating</h1>
+        <hr class="donor-separator"> 
+        <ul class="donor-list">
+            <li>Seed Money - 25$, March 2025</li>
+            <li>Pokka- 50$, May 2025</li>
+            <li>Yvonne - 25$, July 2025</li>
+            <li>Yvonne - 100$, August 2025</li>
+            <li>Beulah - 25$, August 2025</li>
+            <li>Frank - 100$, August 2025</li>
+            <li>Amy - 25$, August 2025</li>
+            <li>Judy - 25$, August 2025</li>
+            <li>Sophia - 25$, August 2025</li>
+            <li>Guity - 50$, August 2025</li>
+            <li>Hussain - 20$, August 2025</li>
+            <li>Ole - 25$, August 2025</li>
+            <li>Anonymous - 25$, August 2025</li>
+            <li>Marica - 100$, August 2025</li>
+            
+        </ul>
+         <a href="https://gofund.me/eb532531" target="_blank" class="cta-button">Donate</a>
+         
+    </section>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const title = document.querySelector(".donors-title");
+        const names = document.querySelectorAll(".donor-list li");
+
+        const section = document.querySelector(".donors");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                title.classList.add("visible");
+
+                names.forEach((name, index) => {
+                setTimeout(() => {
+                    name.classList.add("visible");
+                }, index * 300); 
+                });
+
+                observer.unobserve(section);
+            }
+            });
+        }, { threshold: 0.2 });
+
+        observer.observe(section);
+        });
+
+    </script>
+    
+    <div class="contact">
+        <h2>Contact Me</h2>
+        <p>Get in touch with me for more information or to get started with our services.</p>
+        <p>Email: ceo.ipayyouplay@gmail.com</p>
+    </div>
+
+
     <footer>
-        <p>&copy; FreeVideoGames.com. All Rights Reserved.</p>
+        <p>&copy; ipayyouplay.github.io. All Rights Reserved. Last Updated 9/10/25</p>
     </footer>
 
+
+
+   
 </body>
-
-
-
+</html>
+           <!--     <a href="https://gofund.me/eb532531" target="_blank" class="cta-button">Donate</a>-->
