@@ -52,6 +52,8 @@
     <div class="sponsors">
         <p>_____________________________________________________________________________________________________________</p>
         <h1>Endorsed By</h1>
+        <h2>Dr. Shaowei Chen, Ph. D., Professor, Department of Chemistry, UCSC; Faculty Director, COSMOS program, UCSC</h2>
+        <h2>Mr. Flint Christensen, Chair, Department of Computer Science, Piedmont High School, Piedmont, CA</h2>
         <p>____________________________________________________________________________________</p>
         <div class="images">
             <img class="scroll-img left" src="CosmosLogo.jpg" alt="Cosmos Logo">
@@ -87,7 +89,14 @@
         </div>
         
     </div>
-    
+    <div class="graphs">
+        <h1><b>Our Impact</b></h1>
+        <div class="image-grid">
+            <img src="FriendshipsSurvey.png" class="left-grid-img hidden" alt="Image 1">
+            <img src="ImpactSurvey.png" class="right-grid-img hidden" alt="Image 2">
+            <img src="RecommendSurvey.png" class="bottom-grid-img hidden" alt="Image 3">
+        </div>
+    </div>
     <script>
         var acc = document.getElementsByClassName("accordion");
         var i;
@@ -107,7 +116,7 @@
         }
     </script>
 
- 
+    
        
     
    
@@ -156,14 +165,32 @@
         const observers = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-            entry.target.classList.add('visible'); // fade in
+            entry.target.classList.add('visible'); 
             } else {
-            entry.target.classList.remove('visible'); // fade out if needed
+            entry.target.classList.remove('visible'); 
             }
         });
         }, { threshold: 0.1 });
 
         observer.observe(hero);
+
+
+        const gridImages = document.querySelectorAll(".image-grid img");
+
+        const observerGrid = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const img = entry.target;
+                if (entry.isIntersecting) {
+                    img.classList.remove("hidden");
+                } else {
+                    img.classList.add("hidden");
+                }
+            });
+        }, { threshold: 0.3 });
+
+        gridImages.forEach(img => observerGrid.observe(img));
+
+
 </script>
 
 </body>
