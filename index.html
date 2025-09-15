@@ -28,21 +28,26 @@
     
         
    
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        
-
+    <!--
         <div class="hero-content1">
         
             <p><b>I PAY YOU PLAY</b></p>
-
-         <!--   <a href="#about" class="cta-button">Learn More</a>-->
         </div>
+ 
         <div class="hero-content2">
-            <p><b>For Free</b></p>
+            <p><b>For Free.</b></p>
+        </div>
+    -->
+    <!-- Hero Section -->
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="inline-content">
+            <p class="inline-text"><b>IPAYYOUPLAY</b></p>
+            <img src="realLogo.png" alt="Steam" class="inline-img">
+            <p class="inline-text bottom-text"><b>STEAM FOR FREE</b></p>
         </div>
     </section>
+
 
     <!-- About Section -->
     <section id="about" class="about">
@@ -118,7 +123,56 @@
 
     
        
+    <section class="donors">
+        <h1 class="donors-title">See Some Games We've Donated</h1>
+        <hr class="donor-separator"> 
+        <ul class="donor-list">
+            <li>Xenoduck - Terraria 4/1/25</li>
+            <li>Dinozilla - Minecraft 6/3/25</li>
+            <li>Luminous - Diablo 6/3/25</li>
+            <li>Qi - Get To Work 7/9/25</li>
+            <li>Gigi - Resident Evil 8/20/25</li>
+            <li>Anonymous - Silksong 9/14/25</li>
+            <li>Anonymous - Silksong 9/14/25</li>
+            <li>Anonymous - Silksong 9/14/25</li>
+            <li>Anonymous - Terraria 9/14/25</li>
+            
+        </ul>
+     
+         
+    </section>
     
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const section = document.querySelector(".donors");
+        const title = section.querySelector(".donors-title");
+        const names = section.querySelectorAll(".donor-list li");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Animate title
+                    title.classList.add("visible");
+
+                    // Animate each name with a stagger
+                    names.forEach((name, index) => {
+                        setTimeout(() => {
+                            name.classList.add("visible");
+                        }, index * 300);
+                    });
+                } else {
+                    // Remove animation when out of view
+                    title.classList.remove("visible");
+                    names.forEach(name => name.classList.remove("visible"));
+                }
+            });
+        }, { threshold: 0.2 });
+
+        observer.observe(section);
+    });
+
+
+    </script>
    
     <div class="contact">
         <h2>Contact Me</h2>
@@ -132,7 +186,7 @@
     </footer>
     
      <script>
-        const text = document.querySelectorAll('.hero-content1, .hero-content2');
+        const text = document.querySelectorAll('.inline-text, .inline-text bottom-text');
 
         const wth = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -195,7 +249,6 @@
 
 </body>
 </html>
-
 
 
 
