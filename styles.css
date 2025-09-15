@@ -67,23 +67,15 @@ nav a:hover {
 .hero {
     background: url('steam.jpg') center/cover no-repeat;
     color: white;
-    
     text-align: center;
     height: 100vh;
 
     display: flex;
     flex-direction: column;
-
-    align-items: center; 
-    gap: 1rem; 
-    padding-top:10vh;
-    
-    /*
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;     
-    text-align:center;
-    gap: clamp(1rem, 10vh, 5rem); */
+    align-items: center;
+    justify-content: flex-start; 
+    padding-top: 10vh;          
+    gap: 50vh;                    
 }
 
 .hero-content1,
@@ -93,7 +85,6 @@ nav a:hover {
 }
 
 .hero-content1 {
-
     font-size: clamp(2rem, 6vw, 5rem);
     transform: translateX(-50%);
     line-height: 1.2;
@@ -105,7 +96,6 @@ nav a:hover {
 }
 
 .hero-content2 {
-    margin-top:50vh;
     font-size: clamp(1.5rem, 5vw, 4.5rem);
     transform: translateX(50%);
     line-height: 1.2;
