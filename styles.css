@@ -68,7 +68,7 @@ nav a:hover {
 
 
 .hero {
-    background: url('STEAMNOLOGO.png') center/cover no-repeat;
+    background: url('SteamNoLogo.png') center/cover no-repeat;
     color: white;
     height: 100vh;
 
@@ -465,3 +465,4 @@ footer {
     padding: 1rem;
     width: 100%;
 }
+
