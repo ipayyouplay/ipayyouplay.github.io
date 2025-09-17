@@ -32,8 +32,12 @@ header {
     padding: 1% 2%;
     background-color: #000;
     width: 100%;
+    position:fixed;
+    top:0;
+    z-index: 1000;
 }
 .nav-bar {
+    z-index: 1000;
     display: flex;
     justify-content: space-between; 
     align-items: center;
@@ -110,13 +114,19 @@ nav a:hover {
 }
 
 .inline-img {
-    width: clamp(100px, 25vw + 8vh, 250px); 
+    width: clamp(80px, 25vw + 8vh, 230px);
     height: auto;
-    max-width: 100%;         
+    max-width: 100%;
+    display: inline-block;       
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    opacity: 0;                
+    transform: rotate(0deg) scale(1);
 }
 
-
-
+.inline-img.animate {
+    transform: rotate(360deg) scale(1.2); 
+    opacity: 1;
+}
 
 
 .hero-content1 {
@@ -465,4 +475,3 @@ footer {
     padding: 1rem;
     width: 100%;
 }
-
