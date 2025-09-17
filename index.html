@@ -27,24 +27,13 @@
     </header>
     
         
-   
-    <!--
-        <div class="hero-content1">
-        
-            <p><b>I PAY YOU PLAY</b></p>
-        </div>
- 
-        <div class="hero-content2">
-            <p><b>For Free.</b></p>
-        </div>
-    -->
-    <!-- Hero Section -->
+
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="inline-content">
             <p class="inline-text"><b>IPAYYOUPLAY</b></p>
             <img src="realLogo.png" alt="Steam" class="inline-img">
-            <p class="inline-text bottom-text"><b>STEAM FOR FREE</b></p>
+            <p class="inline-text bottom-text"><b>Gifting Steam Games For Free</b></p>
         </div>
     </section>
 
@@ -132,8 +121,9 @@
             <li>Luminous - Diablo 6/3/25</li>
             <li>Qi - Get To Work 7/9/25</li>
             <li>Gigi - Resident Evil 8/20/25</li>
-            <li>Dimxs./Yaboidx (Thanks for the advice!) - Silksong 9/16/25</li>
-            <li>Anonymous - Silksong 9/16/25</li>
+            <li>Anonymous - Silksong 9/14/25</li>
+            <li>Anonymous - Silksong 9/14/25</li>
+            <li>Anonymous - Silksong 9/14/25</li>
             <li>Anonymous - Terraria 9/14/25</li>
             
         </ul>
@@ -150,17 +140,16 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    // Animate title
+                
                     title.classList.add("visible");
 
-                    // Animate each name with a stagger
                     names.forEach((name, index) => {
                         setTimeout(() => {
                             name.classList.add("visible");
                         }, index * 300);
                     });
                 } else {
-                    // Remove animation when out of view
+              
                     title.classList.remove("visible");
                     names.forEach(name => name.classList.remove("visible"));
                 }
@@ -198,6 +187,24 @@
         }, { threshold: 0.2 });
 
         text.forEach(el => wth.observe(el));
+
+        const imageLogo = document.querySelectorAll('.inline-img');
+
+        const observerLogo = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    } else {
+                        entry.target.classList.remove('animate');
+                    }
+                });
+            },
+            { threshold: 0.5 } 
+        );
+
+        imageLogo.forEach(img => observerLogo.observe(img));
+
     
         const images = document.querySelectorAll('.scroll-img');
 
@@ -248,7 +255,6 @@
 
 </body>
 </html>
-
 
 
 
