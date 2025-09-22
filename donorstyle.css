@@ -3,7 +3,29 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    overflow-x:hidden;
+    scrollbar-width: thin; 
+    scrollbar-color: #ffffff #1f2123;
+}
+::-webkit-scrollbar {
+  width: 8px; 
+  height: 4px; 
+}
 
+::-webkit-scrollbar-track {
+  background: #f3f4f6; 
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9ca3af; 
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(0, 119, 255);
+}
 body {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
@@ -145,3 +167,4 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
