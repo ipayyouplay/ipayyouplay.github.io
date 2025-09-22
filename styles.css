@@ -6,12 +6,11 @@
 html{
     overflow-x:hidden;
     scrollbar-width: thin; 
-    scrollbar-color: #3f516e #1f2123;
+    scrollbar-color: #ffffff #1f2123;
 }
-
 ::-webkit-scrollbar {
   width: 8px; 
-  height: 8px; 
+  height: 4px; 
 }
 
 ::-webkit-scrollbar-track {
@@ -498,3 +497,4 @@ footer {
     padding: 1rem;
     width: 100%;
 }
+
